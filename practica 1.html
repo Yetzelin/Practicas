@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formula General</title>
+    <title>Arreglo</title>
     <script>
-        function formula(){
-            let a = document.getElementById("a").value;
-            let b = document.getElementById("b").value;
-            let c = document.getElementById("c").value;
+        function boton(){
+            let arreglo = document.getElementById("arr").value;
+            let arr = arreglo.split("");
+            let lugar = document.getElementById("lugar").value;
+            let add = document.getElementById("add").value;
 
-            let x1 = (-b + (Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
-            let x2 = (-b - (Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
+            arr[lugar-1] = add;
             //Beberly Yetzelin
-            return document.write("X1 = "+x1+" X2 = "+x2);
-        }
+            return document.write(arr);
         
+        }
     </script>
 </head>
 <body>
-    <form align = "center">
-        Valor de "a":<br>
-        <input type="number" id="a"><br>
-        Valor de "b":<br>
-        <input type="number" id="b"><br>
-        Valor de "c":<br>
-        <input type="number" id="c"><br>
-        <button onclick="formula()">Calcular</button>
+    <form align="center">
+        <i>Escribe el arreglo:</i>
+        <input type="text" id="arr"><br>
+        <i>Insertar algo mas:</i>
+        <input type="text" id="add"><br>
+        <i>Indica donde agragarl:</i>
+        <input type="text" id="lugar"><br>
+        <br><button onclick="boton()">Click</button>
     </form>
 </body>
 </html>
