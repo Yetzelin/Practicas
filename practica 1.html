@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arreglo</title>
+    <title>Piedra papel tijeras</title>
     <script>
-        function boton(){
-            let arreglo = document.getElementById("arr").value;
-            let arr = arreglo.split("");
-            let lugar = document.getElementById("lugar").value;
-            let add = document.getElementById("add").value;
 
-            arr[lugar-1] = add;
-            //Beberly Yetzelin
-            return document.write(arr);
-        
+        function SWITCH_CASE(){
+            let jugador1 = document.getElementById("jugador1").value;
+            let jugador2 = document.getElementById("jugador2").value;
+
+            let comparativa = jugador1+"-"+jugador2;
+
+            switch(comparativa){
+                case "R-T":
+                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 1");
+                    break;
+                case "T-P":
+                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 1");
+                    break;
+                case "P-R":
+                    document.write(comparativa+" Papel cubre Roca, gana el jugador 1");
+                    break;
+                case "T-R":
+                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 2");
+                    break;
+                case "P-T":
+                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 2");
+                    break;
+                case "R-P":
+                    document.write(comparativa+" Papel cubre Roca, gana el jugador 2");
+                    break;
+                default:
+                    document.write(comparativa+" Empate");
+                    break;
+            }
         }
+
+        
     </script>
 </head>
 <body>
-    <form align="center">
-        <i>Escribe el arreglo:</i>
-        <input type="text" id="arr"><br>
-        <i>Insertar algo mas:</i>
-        <input type="text" id="add"><br>
-        <i>Indica donde agragarl:</i>
-        <input type="text" id="lugar"><br>
-        <br><button onclick="boton()">Click</button>
-    </form>
+    <div>
+        <form align = "center">
+            <h2>Jugador 1:</h2> <br>
+            <input type="password" id="jugador1">
+        </form>
+    </div>
+    <div>
+        <form align = "right">
+            <h2>Jugador 2:</h2> <br>
+            <input type="password" id="jugador2">
+        </form>
+    </div>
+    <button onclick="SWITCH_CASE()">Jugar</button>
 </body>
 </html>
