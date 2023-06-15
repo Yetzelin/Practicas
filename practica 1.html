@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindromos</title>
+    <script>
+        function palindromos(){
+            let texto = document.getElementById("texto").value;
+
+            let letra_media = Math.floor((texto.length - 1) / 2);
+            let hacia_adelante = 0;
+            let hacia_atras = texto.length -1;
+        
+            while(hacia_adelante < texto.length-1){
+
+                if(texto[hacia_adelante] !== texto[hacia_atras]){
+                    return document.write("No es un palindromo");
+                }    
+                
+                hacia_adelante++;
+                hacia_atras--;
+            }
+            
+            //Beberly Yetzelin
+            return document.write("Es un palindromo y la letra de en medio es: "+texto[letra_media]);
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <form align="center">
+        Veamos si es un palindromo:<br>
+        <input type="text" id="texto"><br>
+        <br><button onclick="palindromos()">Verificar</button>
+    </form>
+</body>
+</html>
