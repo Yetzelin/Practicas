@@ -1,58 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra papel tijeras</title>
-    <script>
+function bucles(){
+    let nums = 1;
+    for(let i = 1; nums <= 52; i++){
+        console.log(nums);
+        nums+=i;
+    }
 
-        function SWITCH_CASE(){
-            let jugador1 = document.getElementById("jugador1").value;
-            let jugador2 = document.getElementById("jugador2").value;
-
-            let comparativa = jugador1+"-"+jugador2;
-
-            switch(comparativa){
-                case "R-T":
-                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 1");
-                    break;
-                case "T-P":
-                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 1");
-                    break;
-                case "P-R":
-                    document.write(comparativa+" Papel cubre Roca, gana el jugador 1");
-                    break;
-                case "T-R":
-                    document.write(comparativa+" Roca rompe Tijeras, gana el jugador 2");
-                    break;
-                case "P-T":
-                    document.write(comparativa+" Tijeras corta Papel, gana el jugador 2");
-                    break;
-                case "R-P":
-                    document.write(comparativa+" Papel cubre Roca, gana el jugador 2");
-                    break;
-                default:
-                    document.write(comparativa+" Empate");
-                    break;
-            }
-        }
-
-        
-    </script>
-</head>
-<body>
-    <div>
-        <form align = "center">
-            <h2>Jugador 1:</h2> <br>
-            <input type="password" id="jugador1">
-        </form>
-    </div>
-    <div>
-        <form align = "right">
-            <h2>Jugador 2:</h2> <br>
-            <input type="password" id="jugador2">
-        </form>
-    </div>
-    <button onclick="SWITCH_CASE()">Jugar</button>
-</body>
-</html>
+}
+bucles();
